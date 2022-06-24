@@ -52,8 +52,9 @@ expect(age.toCheck()).toEqual(true);
 
 test(" if age is under 100, return difference in earth years", () => {
   const age = new Age(30);
-  let ageLeft = (100 - age);
-  expect(ageLeft.toLive()).toEqual(70);
+  const ageLeft = (100 - age.earth);
+  expect(ageLeft.toLive()).toEqual(70 + toString(p));
 })
+
 
 })
