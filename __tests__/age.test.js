@@ -34,11 +34,16 @@ test("should correctly output the start age into Jupiter years", () => {
 })
 //10:45 good fail when looking to define the to Jupiter function ///
 
+test("should take input age and create a life expectancy in earth years", () => {
+const age = new Age(50);
+const timeLeft = parseInt(age.earth);
+expect(timeLeft).toEqual(50);
+})
 
-test("should take input age and create a life expectancy (in earth years)", () => {
-const age = new Age(12);
-expect(age.timeLeft()).toEqual(88);
-
+test("should give you life expectancy for living on Mercury", () => {
+  const age = new Age(50);
+  const timeLeft =  parseInt(age.toMercury());
+  expect(timeLeft).toEqual(208);
 })
 
 })
