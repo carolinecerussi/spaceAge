@@ -34,4 +34,11 @@ test("should correctly output the start age into Jupiter years", () => {
 })
 //10:45 good fail when looking to define the to Jupiter function ///
 
+
+test("should take input age and create a life expectancy (in earth years)", () => {
+const age = new Age(12);
+expect(age.timeLeft()).toEqual(88);
+
+})
+
 })

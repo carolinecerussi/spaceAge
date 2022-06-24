@@ -23,3 +23,9 @@ Age.prototype.toJupiter = function () {
   const jupiter = (this.earth/ 11.86);
   return Math.round(jupiter * 100) / 100;
 }
+
+Age.prototype.timeLeft = function() {
+  const age = new Age();
+  const timeLeft = (100 - this.earth);
+  return Math.round(timeLeft * 100) / 100;
+}
