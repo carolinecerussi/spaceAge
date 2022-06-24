@@ -1,5 +1,4 @@
 import Age from "../src/age.js";
-
 describe ("Age", () => {
 
   test ("should correctly create an age object with input number", () =>  {
@@ -45,5 +44,11 @@ test("should give you life expectancy for living on Mercury", () => {
   const timeLeft =  parseInt(age.toMercury());
   expect(timeLeft).toEqual(208);
 })
+
+test("should return true statement if age is under 100", () => {
+const age = new Age(20);
+expect(age.toCheck()).toEqual(true);
+})
+
 
 })

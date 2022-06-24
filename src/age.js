@@ -6,11 +6,11 @@ Age.prototype.toMercury = function () {
   const age = new Age();
   const mercury = (this.earth / .24 );
   return Math.round(mercury * 100) /100;
-
 }
+
 Age.prototype.toVenus = function () {
   const age = new Age();
-  const venus = (this.earth/ .62);
+  const venus = (this.earth / .62);
   return Math.round(venus * 100) / 100;
 }
 Age.prototype.toMars = function () {
@@ -30,8 +30,14 @@ Age.prototype.toTimeLeft = function () {
   return Math.round(timeLeft * 100) / 100;
 } 
 
-
-
+Age.prototype.toCheck = function () {
+  const age = new Age();
+  if (this.earth >= 100) {
+    return false;
+  } (this.earth< 100 && this.age >0); {
+    return true;
+  }
+}
 
 
 
