@@ -45,15 +45,16 @@ test("should give you life expectancy for living on Mercury", () => {
   expect(timeLeft).toEqual(208);
 })
 
-test("should return true statement if age is under 100", () => {
-const age = new Age(20);
-expect(age.toCheck()).toEqual(true);
+test("should return false and equal ouput1 when  average lifespan is higher than 100", () => {
+const age = new Age(189);
+const output1= "wow! you're " + (age) +". That's " + (age - 100) + " more years than the average earthling!";
+expect(age.toCheck()).toEqual(output1);
 })
 
-test(" if age is under 100, return difference in earth years", () => {
-  const age = new Age(30);
-  const ageLeft = (100 - age.earth);
-  expect(ageLeft.toLive()).toEqual(70 + toString(p));
+test(" should look at entered earth age and call true  if age is under 100 and greater than 0, return output 2", () => {
+  const age = new Age(80);
+  const output2 = "you have " + (100 - age) + " years before the end of your life! "+ " wow, you're young";
+  expect(age.toCheck()).toEqual(output2);
 })
 
 

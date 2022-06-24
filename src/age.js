@@ -32,13 +32,14 @@ Age.prototype.toTimeLeft = function () {
 
 Age.prototype.toCheck = function () {
   const age = new Age();
+  const output1= "wow! you're " + (age) +". That's " + (age - 100) + " more years than the average earthling!";
+  const output2 = "you have " + (100 - age) + " years before the end of your life! "+ " wow, you're young";
   if (this.earth >= 100) {
-    return false;
-  } (this.earth< 100 && this.age >0); {
-    return true;
-  }
+    return output1;
+  } (this.earth< 100 && this.earth > 0); {
+    return output2;
+  } 
 }
-
 
 
 
