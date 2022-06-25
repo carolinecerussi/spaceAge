@@ -47,8 +47,9 @@ test("should give you life expectancy for living on Mercury", () => {
 
 test("should return false and equal ouput1 when  average lifespan is higher than 100", () => {
 const age = new Age(189);
-const output1= "wow! you're " + (age) +". That's " + (age - 100) + " more years than the average earthling!";
-expect(age.toCheck()).toEqual(output1);
+const earth = age;
+const output1= "wow! you're " + earth +". That's " + (earth - 100) + " more years than the average earthling!";
+expect(earth.toCheck()).toEqual(output1);
 })
 
 test(" should look at entered earth age and call true  if age is under 100 and greater than 0, return output 2", () => {
@@ -57,5 +58,10 @@ test(" should look at entered earth age and call true  if age is under 100 and g
   expect(age.toCheck()).toEqual(output2);
 })
 
+test("should output age plug in values to be replaced with whatever planet is being called", ()=>{
+const age= new Age(23);
+const marsAge = (age.toMars());
+expect(marsAge).toEqual(12.23);
+}) //wip test//
 
 })
